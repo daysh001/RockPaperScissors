@@ -22,12 +22,11 @@
   <body>
     <div class="container text-center" id="topHeadings">
       <p class="display-3">Rock, Paper, Scissors!</p>
-      <br />
-      <p class="display-4">Round x</p>
+      <!-- <p class="display-4" id="roundNum">Round x</p> -->
       <br />
       <p class="lead"><strong>x Won!</strong></p>
       <br />
-      <button class="btn btn-warning">Play Again?</button>
+      <button class="btn btn-warning">Play Game</button>
     </div>
     <br /><br />
     <div class="container" id="turnGrid">
@@ -38,11 +37,11 @@
       </div>
       <div class="row">
         <div class="col borderThick">
-          <img src="images/Rock.png" class="img-fluid" height="400" />
+          <img src="images/Rock.png" class="img-fluid" height="400" id="playerChoiceImg"/>
         </div>
         <div class="col"></div>
         <div class="col borderThick">
-          <img src="images/Rock.png" class="img-fluid" height="400" />
+          <img src="images/Rock.png" class="img-fluid" height="400" id="computerChoiceImg"/>
         </div>
       </div>
       <div class="row lead">
@@ -53,17 +52,17 @@
       <br />
       <div class="row text-center">
         <div class="col">
-          <button class="btn btn-outline-warning">
+          <button class="btn btn-outline-warning" id="playerRock">
             <img src="images/Rock.png" height="100" />
           </button>
-          <button class="btn btn-outline-warning">
+          <button class="btn btn-outline-warning" id="playerPaper">
             <img src="images/Paper.png" height="100" />
           </button>
-          <button class="btn btn-outline-warning">
+          <button class="btn btn-outline-warning" id="playerScissors">
             <img src="images/Scissors.png" height="100" />
           </button>
         </div>
-      </div>
+      </div> <br>
     </div>
   </body>
 
