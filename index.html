@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="main.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>Rock, Paper, Scissors!</title>
+  </head>
+  <body>
+    <div class="container text-center" id="topHeadings">
+      <p class="display-3">Rock, Paper, Scissors!</p>
+      <br />
+      <p class="display-4">Round x</p>
+      <br />
+      <p class="lead"><strong>x Won!</strong></p>
+      <br />
+      <button class="btn btn-warning">Play Again?</button>
+    </div>
+    <br /><br />
+    <div class="container" id="turnGrid">
+      <div class="row lead">
+        <div class="col"><strong>Wins: x</strong></div>
+        <div class="col text-center"><strong>Ties: x</div></strong>
+        <div class="col"><strong>Wins: x</div></strong>
+      </div>
+      <div class="row">
+        <div class="col borderThick">
+          <img src="images/Rock.png" class="img-fluid" height="400" />
+        </div>
+        <div class="col"></div>
+        <div class="col borderThick">
+          <img src="images/Rock.png" class="img-fluid" height="400" />
+        </div>
+      </div>
+      <div class="row lead">
+        <div class="col"><strong>Player</div></strong>
+        <div class="col"></div>
+        <div class="col"><strong>Computer</div></strong>
+      </div>
+      <br />
+      <div class="row text-center">
+        <div class="col">
+          <button class="btn btn-outline-warning">
+            <img src="images/Rock.png" height="100" />
+          </button>
+          <button class="btn btn-outline-warning">
+            <img src="images/Paper.png" height="100" />
+          </button>
+          <button class="btn btn-outline-warning">
+            <img src="images/Scissors.png" height="100" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="RockPaperScissors.js"></script>
 </html>
