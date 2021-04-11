@@ -24,24 +24,24 @@
       <p class="display-3">Rock, Paper, Scissors!</p>
       <!-- <p class="display-4" id="roundNum">Round x</p> -->
       <br />
-      <p class="lead"><strong>x Won!</strong></p>
+      <p class="lead" id="whoWon"><strong>x Won!</strong></p>
       <br />
-      <button class="btn btn-warning">Play Game</button>
+      <button class="btn btn-warning" id="playBtn">Play Game</button>
     </div>
     <br /><br />
     <div class="container" id="turnGrid">
       <div class="row lead">
-        <div class="col"><strong>Wins: x</strong></div>
-        <div class="col text-center"><strong>Ties: x</div></strong>
-        <div class="col"><strong>Wins: x</div></strong>
+        <div class="col"><strong>Wins: <span id="playerWins">0</span></strong></div>
+        <div class="col text-center" id="ties"><strong>Ties: x</div></strong>
+        <div class="col"><strong>Wins: <span id="computerWins">0</span></div></strong>
       </div>
       <div class="row">
         <div class="col borderThick">
-          <img src="images/Rock.png" class="img-fluid" height="400" id="playerChoiceImg"/>
+          <img src="images/QuestionMark.png" class="img-fluid" height="400" id="playerChoiceImg"/>
         </div>
         <div class="col"></div>
         <div class="col borderThick">
-          <img src="images/Rock.png" class="img-fluid" height="400" id="computerChoiceImg"/>
+          <img src="images/QuestionMark.png" class="img-fluid" height="400" id="computerChoiceImg"/>
         </div>
       </div>
       <div class="row lead">
@@ -50,7 +50,7 @@
         <div class="col"><strong>Computer</div></strong>
       </div>
       <br />
-      <div class="row text-center">
+      <div class="row text-center" id="playerChoices">
         <div class="col">
           <button class="btn btn-outline-warning" id="playerRock">
             <img src="images/Rock.png" height="100" />

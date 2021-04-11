@@ -1,111 +1,101 @@
 // //globals
 let playerScore = 0;
 let computerScore = 0;
+let toggleCompTurn = false;
 
-//the computers choice
-function computerPlay() {
-  let computerChoice = Math.floor(Math.random() * 3 + 1);
-
-  switch (
-    computerChoice //changes the computers icon to its choice
-  ) {
-    case 1:
-      document.getElementById("computerChoiceImg").src = "images/Rock.png";
-      return 1;
-      break;
-
-    case 2:
-      document.getElementById("computerChoiceImg").src = "images/Paper.png";
-      return 2;
-      break;
-
-    case 3:
-      document.getElementById("computerChoiceImg").src = "images/Scissors.png";
-      return 3;
-      break;
-
-    default:
-      alert.log("Something has gone wrong.");
-  }
+function start() {
+  toggleCompTurn = false;
+  let winner = document.getElementById("whoWon");
+  winner.style.display = "none";
 }
-
-computerPlay();
 
 //the players choice
 //the player icon changes to its choice depending which button has been clicked
 function playerPlay() {
-  btnRock = document.querySelector("#playerRock");
+  let btnRock = document.querySelector("#playerRock");
   btnRock.addEventListener("click", () => {
     document.getElementById("playerChoiceImg").src = "images/Rock.png";
     return 1;
   });
 
-  btnPaper = document.querySelector("#playerPaper");
+  let btnPaper = document.querySelector("#playerPaper");
   btnPaper.addEventListener("click", () => {
     document.getElementById("playerChoiceImg").src = "images/Paper.png";
     return 2;
   });
 
-  btnScissors = document.querySelector("#playerScissors");
+  let btnScissors = document.querySelector("#playerScissors");
   btnScissors.addEventListener("click", () => {
     document.getElementById("playerChoiceImg").src = "images/Scissors.png";
     return 3;
   });
+
+  toggleCompTurn = true;
 }
 
-playerPlay();
+//the computers choice
+function computerPlay() {
+  if (toggleCompTurn === true) {
+    let computerChoice = Math.floor(Math.random() * 3 + 1);
 
-//determines who wins and loses
+    switch (
+    computerChoice //changes the computers icon to its choice
+    ) {
+      case 1:
+        document.getElementById("computerChoiceImg").src = "images/Rock.png";
+        return 1;
+        break;
+
+      case 2:
+        document.getElementById("computerChoiceImg").src = "images/Paper.png";
+        return 2;
+        break;
+
+      case 3:
+        document.getElementById("computerChoiceImg").src = "images/Scissors.png";
+        return 3;
+        break;
+
+      default:
+        alert.log("Something has gone wrong.");
+    }
+    toggleCompTurn = false;
+  }
+
+  
+
+}
+
+//win and lose logic per round
 function playRound(playerSelection, computerSelection) {
   if (
     ((playerSelection == 2 || 3) && playerSelection > computerSelection) ||
     (playerSelection === 1 && computerSelection === 3)
   ) {
-    playerScore++;
-    console.log(
-      `The player has won! The score is P:${playerScore} and C:${computerScore}`
-    );
+    playerScore++; 
+
+    let playerWins = document.querySelector("#playerWins");
+    playerWins.textContent = playerScore;
   } else if (playerSelection === computerSelection) {
-    console.log(
-      `It's a draw! The score is P:${playerScore} and C:${computerScore}`
-    );
+
+    
   } else {
-    computerScore++;
-    console.log(
-      `The computer has won! The score is P:${playerScore} and C:${computerScore}`
-    );
+    computerScore++;  // append computerScore to computerWins ID
+
+    let computerWins = document.querySelector("#computerWins");
+    computerWins.textContent = computerScore;
   }
 }
 
-//runs the game and displays final score
-function game() {
-  //round 1
-
-  playRound(playerPlay(), computerPlay());
-
-  //round 2
-  console.log("Round 2");
-  playRound(playerPlay(), computerPlay());
-
-  //round 3
-  console.log("Round 3");
-  playRound(playerPlay(), computerPlay());
-
-  //round 4
-  console.log("Round 4");
-  playRound(playerPlay(), computerPlay());
-
-  //round 5
-  console.log("Round 5");
-  playRound(playerPlay(), computerPlay());
-
+// Winner and loser logic overall (game over)
+function gameOver() {
   //displays overall score and winner
-  if (playerScore > computerScore) {
+  if (playerScore > computerScore) {  // whoWon == "Player Won"  
     console.log(
       `The game is over, the player has won!. The final score is p:${playerScore} and C:${computerScore}.`
     );
   } else if (computerScore > playerScore) {
-    console.log(
+    console.log(  // whoWon == "Computer Won"
       `The game is over, the computer has won! The final score is p:${playerScore} and C:${computerScore}.`
     );
   } else {
@@ -115,4 +105,16 @@ function game() {
   }
 }
 
-// game();
+//runs the game
+function game() {
+
+ // let playerChoices = document.getElementById("playerChoices");
+  playRound(playerPlay(), computerPlay());
+  gameOver();
+}
+
+// **** GAME ****
+start();
+
+let playButton = document.getElementById("playBtn");
+playButton.addEventListener('click', game); //starts the game 
