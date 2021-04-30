@@ -6,11 +6,11 @@ This is the final version which includes added functionality to the prototype in
 
 <br>
 
-<img style="50%" src="https://user-images.githubusercontent.com/64609311/114361005-95afd080-9b6d-11eb-97fc-2d0a96b3b279.png">
+<img src="https://user-images.githubusercontent.com/64609311/114361005-95afd080-9b6d-11eb-97fc-2d0a96b3b279.png">
 
 <br>
 
-![image](https://user-images.githubusercontent.com/64609311/114361120-b415cc00-9b6d-11eb-8b77-774108c41c4e.png)
+<img src="https://user-images.githubusercontent.com/64609311/114361120-b415cc00-9b6d-11eb-8b77-774108c41c4e.png">
 
 <br>
 
