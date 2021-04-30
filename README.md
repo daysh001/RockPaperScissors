@@ -15,6 +15,6 @@ This is the final version which includes added functionality to the prototype in
 <br>
 
 <p>Attributions</p>
-<p>Rock image: <a target="_blank" href="https://www.freepik.com/vectors/cartoon">Cartoon vector created by macrovector - www.freepik.com</a></p>
+<p>Rock image: <a href="https://www.freepik.com/vectors/cartoon">Cartoon vector created by macrovector - www.freepik.com</a></p>
 <p>Paper image: <a href="https://www.freepik.com/vectors/frame">Frame vector created by macrovector - www.freepik.com</a></p>
 <p>Scissors image: <a href='https://www.freepik.com/vectors/school'>School vector created by macrovector - www.freepik.com</a></p>
