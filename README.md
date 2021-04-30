@@ -6,7 +6,7 @@ This is the final version which includes added functionality to the prototype in
 
 <br>
 
-![image](https://user-images.githubusercontent.com/64609311/114361005-95afd080-9b6d-11eb-97fc-2d0a96b3b279.png)
+<img style="50%" src="https://user-images.githubusercontent.com/64609311/114361005-95afd080-9b6d-11eb-97fc-2d0a96b3b279.png">
 
 <br>
 
